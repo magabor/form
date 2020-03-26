@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="bootstrap-3.3.7.css">
+</head>
+<body>
+    <div id="createNewElement">
+        <div class="form-group"><div class="input-group"><span class="input-group-addon" data-toggle="tooltip" data-placement="bottom" title="ID"><i class="fa fa-id-badge fa-fw"></i></span>
+            <input id="catalogID" type="text" class="form-control" placeholder="ID" /></div>
+        </div>
+        <div class="form-group"><div class="input-group"><span class="input-group-addon" data-toggle="tooltip" data-placement="bottom" title="Description"><i class="fa fa-align-justify fa-fw"></i></span>
+            <input id="catalogDescription" type="text" class="form-control" placeholder="Description" /></div>
+        </div>
+        <div class="form-group"><div class="input-group"><span class="input-group-addon" data-toggle="tooltip" data-placement="bottom" title="Type"><i class="fa fa-microchip fa-fw"></i></span>
+            <input id="catalogType" type="text" class="form-control" placeholder="Type" /></div>
+        </div>
+        <div class="form-group"><div class="input-group"><span class="input-group-addon" data-toggle="tooltip" data-placement="bottom" title="Layer"><i class="fa fa-building-o fa-fw"></i></span>
+            <input id="catalogLayer" type="text" class="form-control" placeholder="Layer" /></div>
+        </div>
+        <div class="form-group"><div class="input-group"><span class="input-group-addon" data-toggle="tooltip" data-placement="bottom" title="Vendor"><i class="fa fa-handshake-o fa-fw"></i></span>
+            <select required id="catalogVendor" class="form-control dropDown">' + vendorOptions + '</select></div>
+        </div>
+        <div class="form-group">
+            <div class="input-group" id="cardOptions">
+                <label for="">
+                    <input type="checkbox" name="" id="master">Master
+                </label>
+                <label for="">
+                    <input type="checkbox" name="" id="slave">Slave
+                </label>
+
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>

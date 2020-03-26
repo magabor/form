@@ -1,0 +1,23 @@
+.bootstrap-colorpalette {
+    padding-left:3px;
+    padding-right:4px;
+    white-space: normal;
+    line-height:0;
+    clear: both;
+}
+
+.bootstrap-colorpalette div {
+    line-height:0;
+}
+
+.bootstrap-colorpalette .btn-color {
+    width: 18px;
+    height: 18px;
+    border: 1px solid #FFFFFF;
+    margin: 3px;
+    padding: 0;
+}
+
+.bootstrap-colorpalette .btn-color:hover {
+    border: 1px solid #000000;
+}
