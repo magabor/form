@@ -1,42 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="bootstrap-3.3.7.css">
 </head>
+
 <body>
-    <div id="createNewElement">
-        <div class="form-group"><div class="input-group"><span class="input-group-addon" data-toggle="tooltip" data-placement="bottom" title="ID"><i class="fa fa-id-badge fa-fw"></i></span>
-            <input id="catalogID" type="text" class="form-control" placeholder="ID" /></div>
-        </div>
-        <div class="form-group"><div class="input-group"><span class="input-group-addon" data-toggle="tooltip" data-placement="bottom" title="Description"><i class="fa fa-align-justify fa-fw"></i></span>
-            <input id="catalogDescription" type="text" class="form-control" placeholder="Description" /></div>
-        </div>
-        <div class="form-group"><div class="input-group"><span class="input-group-addon" data-toggle="tooltip" data-placement="bottom" title="Type"><i class="fa fa-microchip fa-fw"></i></span>
-            <input id="catalogType" type="text" class="form-control" placeholder="Type" /></div>
-        </div>
-        <div class="form-group"><div class="input-group"><span class="input-group-addon" data-toggle="tooltip" data-placement="bottom" title="Layer"><i class="fa fa-building-o fa-fw"></i></span>
-            <input id="catalogLayer" type="text" class="form-control" placeholder="Layer" /></div>
-        </div>
-        <div class="form-group"><div class="input-group"><span class="input-group-addon" data-toggle="tooltip" data-placement="bottom" title="Vendor"><i class="fa fa-handshake-o fa-fw"></i></span>
-            <select required id="catalogVendor" class="form-control dropDown">' + vendorOptions + '</select></div>
-        </div>
-        <label for="">Card Configuration</label>
-        <div class="form-group">
-            <div class="input-group" id="cardOptions">
-                <label for="">
-                    <input type="checkbox" name="" id="master">Master
-                </label>
-                <label for="">
-                    <input type="checkbox" name="" id="slave">Slave
-                </label>
-
+    <div class="cardRefWizard">
+        <div id="createNewElement" class="container-fluid card-form">
+            <div class="form-group">
+                <div class="input-group input-group-sm"><span class="input-group-addon" data-toggle="tooltip"
+                        data-placement="bottom" title="Card Type Name"><i class="fa fa-tag fa-fw"></i></span>
+                    <input id="cardTypeName" type="text" class="form-control" placeholder="Card Type Name" /></div>
             </div>
-        </div>
+            <div class="form-group form-inline">
+                <label for="">Num. Slots</label>
+                <div class="input-group input-group-sm"><span class="input-group-addon" data-toggle="tooltip"
+                        data-placement="bottom" title="Num. Slots"><i class="fa fa-list-ol fa-fw"></i></span>
+                    <select required id="numSlots" type="text" class="form-control dropDown">
+                        <option value="">1</option>
+                        <option value="">2</option>
+                        <option value="">3</option>
+                        <option value="">4</option>
+                    </select></div>
+            </div>
+            <div class="form-group form-inline">
+                <label for="">Vendor</label>
+                <div class="input-group input-group-sm">
+                    <span class="input-group-addon" data-toggle="tooltip" data-placement="bottom" title="Vendor">
+                        <i class="fa fa-handshake-o fa-fw"></i>
+                    </span>
+                    <select required id="catalogVendor" class="form-control dropDown">
+                        <option value="">Huawei</option>
+                        <option value="">Ericsson</option>
+                    </select>
+                </div>
+            </div>
+            <div class="from-group">
+                <label class="checkbox-inline">
+                    <input type="checkbox" id="inlineCheckbox1" value="option1">Cumulative VC12
+                </label>
+            </div>
+            <div class="form-group">
+                <div class="input-group input-group"><span class="input-group-addon" data-toggle="tooltip"
+                        data-placement="bottom" title="Description"><i class="fa fa-bars fa-fw"></i></span>
+                    <textarea id="description" type="text" class="form-control rounded-0" placeholder="Description"
+                        rows="2" style="min-height: 34px; resize: vertical;"></textarea></div>
+            </div>
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <strong>Card Configuration</strong>
+                </div>
+                <div class="panel-body">
+                    <div class="input-group" id="cardOptions" style="margin-bottom: 1vw">
+                        <label class="checkbox-inline">
+                            <input type="checkbox" id="masterCheckbox" value="option1">Master
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" id="slaveCheckbox" value="option2">Slave
+                        </label>
+                    </div>
+                    <div class="panel panel-default" style="margin-bottom:auto;">
+                        <div class="panel-heading">
+                            <strong>Card Category</strong>
+                        </div>
+                        <div class="panel-body">
+                            <div class="from-group">
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" id="inlineCheckbox1" value="option1">UNI
+                                </label>
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" id="inlineCheckbox2" value="option2">NNI
+                                </label>
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" id="inlineCheckbox2" value="option2">Processing
+                                </label>
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" id="inlineCheckbox2" value="option2">Other
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /.col-lg-6 -->
     </div>
-
-
+    <div class="card-selection"></div>
+    <div class="card-selection"></div>
+    <div class="card-bottom"></div>
+    </div>
 </body>
+
 </html>
