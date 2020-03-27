@@ -12,13 +12,12 @@
     <div class="cardRefWizard">
         <div id="createNewElement" class="container-fluid card-form">
             <div class="form-group">
-                <div class="input-group input-group-sm"><span class="input-group-addon" data-toggle="tooltip"
+                <div class="input-group"><span class="input-group-addon" data-toggle="tooltip"
                         data-placement="bottom" title="Card Type Name"><i class="fa fa-tag fa-fw"></i></span>
                     <input id="cardTypeName" type="text" class="form-control" placeholder="Card Type Name" /></div>
             </div>
             <div class="form-group form-inline">
-                <label for="">Num. Slots</label>
-                <div class="input-group input-group-sm"><span class="input-group-addon" data-toggle="tooltip"
+                <div class="input-group"><span class="input-group-addon" data-toggle="tooltip"
                         data-placement="bottom" title="Num. Slots"><i class="fa fa-list-ol fa-fw"></i></span>
                     <select required id="numSlots" type="text" class="form-control dropDown">
                         <option value="">1</option>
@@ -28,8 +27,7 @@
                     </select></div>
             </div>
             <div class="form-group form-inline">
-                <label for="">Vendor</label>
-                <div class="input-group input-group-sm">
+                <div class="input-group">
                     <span class="input-group-addon" data-toggle="tooltip" data-placement="bottom" title="Vendor">
                         <i class="fa fa-handshake-o fa-fw"></i>
                     </span>
@@ -39,7 +37,7 @@
                     </select>
                 </div>
             </div>
-            <div class="from-group">
+            <div class="form-group">
                 <label class="checkbox-inline">
                     <input type="checkbox" id="inlineCheckbox1" value="option1">Cumulative VC12
                 </label>
@@ -50,13 +48,10 @@
                     <textarea id="description" type="text" class="form-control rounded-0" placeholder="Description"
                         rows="2" style="min-height: 34px; resize: vertical;"></textarea></div>
             </div>
-
             <div class="panel panel-default">
-                <div class="panel-heading">
-                    <strong>Card Configuration</strong>
-                </div>
                 <div class="panel-body">
                     <div class="input-group" id="cardOptions" style="margin-bottom: 1vw">
+                        <label style="margin-right: 2vw;">Card Configuration</label>
                         <label class="checkbox-inline">
                             <input type="checkbox" id="masterCheckbox" value="option1">Master
                         </label>
@@ -65,11 +60,9 @@
                         </label>
                     </div>
                     <div class="panel panel-default" style="margin-bottom:auto;">
-                        <div class="panel-heading">
-                            <strong>Card Category</strong>
-                        </div>
                         <div class="panel-body">
                             <div class="from-group">
+                                <label style="margin-right: 4vw;">Card Category</label>
                                 <label class="checkbox-inline">
                                     <input type="checkbox" id="inlineCheckbox1" value="option1">UNI
                                 </label>
