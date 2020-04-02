@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="bootstrap-3.3.7.css">
-    <link rel="stylesheet" type="text/css" href="bootstrap-table-1.6.0.min.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap-table.min.css">
 </head>
 
 <body>
@@ -85,11 +85,15 @@
     </div>
     <div class="card-selection"></div>
     <div class="card-selection"></div>
-    <div class="card-bottom"></div>
+    <div class="card-bottom">
+        <button id="addBtn" class="btn btn-default">Add</button> 
+        <button id="delBtn" class="btn btn-default">Del</button> 
+        <table id="table"></table>
+    </div>
     </div>
 </body>
 <script src="jquery-3.4.1.min.js"></script>
 <script src="bootstrap-3.3.7.min.js"></script>
-<script src="bootstrap-table-1.6.0.min.js"></script>
+<script src="bootstrap-table.min.js"></script>
 <%= htmlWebpackPlugin.tags.bodyTags %>
 </html>
