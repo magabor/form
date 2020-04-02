@@ -2,7 +2,7 @@
 
 const path = require('path');
 const HtmlWebPackPluggin = require('html-webpack-plugin');
-const webpack = require('webpack');
+// const webpack = require('webpack');
 
 module.exports = {
     mode: 'development',
@@ -14,7 +14,11 @@ module.exports = {
         //publicPath: 'pathOrUrlWhenProductionBuild'
     },
     devServer: {
-        contentBase: path.resolve(__dirname,'src/css/bootstrap'),
+        contentBase: [
+            path.resolve(__dirname,'src/css/bootstrap'),
+            path.resolve(__dirname,'src/js/bootstrap'),
+            path.resolve(__dirname,'src/js/jquery'),
+        ],
         contentBasePublicPath: '/'
     },
     module: {
@@ -26,11 +30,12 @@ module.exports = {
     devtool: 'source-map',
     plugins: [
         new HtmlWebPackPluggin({
-            template: 'src/index.html'
+            template: 'src/index.html',
+            inject: false
         }),
-        new webpack.ProvidePlugin({
-            $: 'jquery',
-            jQuery: 'jquery'
-        })
+        // new webpack.ProvidePlugin({
+        //     $: 'jquery',
+        //     jQuery: 'jquery'
+        // })
     ]
 };
