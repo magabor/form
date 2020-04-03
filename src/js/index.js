@@ -12,6 +12,15 @@ function onCheck(event){
 function formatter(value,row,index,field){
     return `<input type="checkbox"  value=${value} />`;
 }
+function selectFormatter(value,row,index,field){
+    return [
+        '<select name="" id="">',
+            '<option value="">Electrical</option>',
+            '<option value="">Microwave</option>',
+            '<option value="">Optical</option>',
+        '</select>'
+    ].join('');
+}
 function detailFormatter(index, row) {
     return 'lalalal';
 }
@@ -37,6 +46,7 @@ const columns = [
 $('#table').bootstrapTable({
     columns: columns,
     detailView: true,
+    onExpandRow: showBwTable
     //detailFormatter: detailFormatter
 });
 
@@ -68,5 +78,36 @@ function newRow(portNo){
     }];
 }
 
-
+function showBwTable(index,row,$detail){
+    // console.log($detail);
+    // $detail.append(`<h1>this is a table ${index}</h1>`);
+    const $addBtn = $(`<button id="addBtn${index}">Add</button>`);
+    const tableId = `table_${index}`;
+    const table = `<table id="${tableId}"></table>`;
+    const columns = [{
+        field:'physMedia',
+        title: 'Physical Media',
+        formatter: selectFormatter
+        },{
+            field:'bw',
+            title: 'Bandwidth'
+        },{
+            field:'allowed',
+            title: 'Allowed',
+            formatter: formatter
+    }];
+    $table = $(table).bootstrapTable({
+        columns: columns
+    });
+    $addBtn.on('click',function (){
+        const data = [{
+            physMedia: 1,
+            bw: 1,
+            allowed: 1
+        }]
+        $(['#',tableId].join('')).bootstrapTable('append',data);
+    })
+    $detail.append($addBtn);
+    $detail.append($table);
+}
 
